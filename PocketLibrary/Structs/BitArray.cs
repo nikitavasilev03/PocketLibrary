@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace PL
+namespace PL.Structs
 {
     public class BitArray : IPLType, IEnumerable<bool>, ICloneable
     {

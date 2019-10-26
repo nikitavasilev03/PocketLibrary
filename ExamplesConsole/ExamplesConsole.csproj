@@ -4,28 +4,30 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C239F5E-572D-4FAC-B318-BEE37EA53A92}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PL</RootNamespace>
-    <AssemblyName>PocketLibrary</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ProjectGuid>{40DCE683-BCE1-4545-A6B7-295ADF2B680C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExamplesConsole</RootNamespace>
+    <AssemblyName>ExamplesConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\mydll\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\mydll\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,22 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Structs\BinaryTree.cs" />
-    <Compile Include="Structs\BinaryTreeNode.cs" />
-    <Compile Include="Structs\BitArray.cs" />
-    <Compile Include="StringConvertor.cs" />
-    <Compile Include="Console\Out.cs" />
-    <Compile Include="Extensions\BaseExtensions.cs" />
-    <Compile Include="OperationTimer.cs" />
-    <Compile Include="IPLType.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sorting\Sorter.cs" />
-    <Compile Include="Sorting\SortLog.cs" />
-    <Compile Include="Sorting\Sorts.cs" />
-    <Compile Include="Structs\ITree.cs" />
-    <Compile Include="Structs\ITreeNode.cs" />
-    <Compile Include="Structs\Tree.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PocketLibrary\PL.csproj">
+      <Project>{9c239f5e-572d-4fac-b318-bee37ea53a92}</Project>
+      <Name>PL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

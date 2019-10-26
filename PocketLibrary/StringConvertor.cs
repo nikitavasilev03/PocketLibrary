@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PL.Structs;
 
 namespace PL
 {
-    public static class InString
+    public static class StringConvertor
     {
         public static readonly string NewLine = Environment.NewLine;
 
@@ -38,7 +35,7 @@ namespace PL
             return "[" + str + "]";
         }
 
-        public static string MatrixToStr<T>(T[,] matrix)
+        public static string MatrixToString<T>(T[,] matrix)
         {
             string s = string.Empty;
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -52,9 +49,9 @@ namespace PL
             return s;
         }
 
-        public static string MatrixToStr<T>(T[,] matrix, int key)
+        public static string MatrixToString<T>(T[,] matrix, int key = -1)
         {
-            if (key == 0) return MatrixToStr(matrix);
+            if (key == 0) return MatrixToString(matrix);
             string s = string.Empty;
             string str = string.Empty; int count = 0;
             if (key == -1)
