@@ -21,10 +21,7 @@ namespace ExamplesConsole
             Print(array, "\n");
 
             tree.AddRange(array);
-            Print(tree vv); 
+            Print(tree);
         }
-
-       
-
     }
 }
